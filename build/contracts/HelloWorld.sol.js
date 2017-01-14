@@ -352,11 +352,11 @@ var SolidityEvent = require("web3/lib/web3/event.js");
       {
         "constant": true,
         "inputs": [],
-        "name": "balance",
+        "name": "owner",
         "outputs": [
           {
             "name": "",
-            "type": "uint256"
+            "type": "address"
           }
         ],
         "payable": false,
@@ -366,14 +366,36 @@ var SolidityEvent = require("web3/lib/web3/event.js");
         "constant": false,
         "inputs": [
           {
+            "name": "_to",
+            "type": "address"
+          },
+          {
             "name": "_value",
             "type": "uint256"
           }
         ],
-        "name": "deposit",
+        "name": "transfer",
         "outputs": [
           {
-            "name": "_newValue",
+            "name": "success",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "name": "_user",
+            "type": "address"
+          }
+        ],
+        "name": "getBalance",
+        "outputs": [
+          {
+            "name": "_balance",
             "type": "uint256"
           }
         ],
@@ -385,11 +407,11 @@ var SolidityEvent = require("web3/lib/web3/event.js");
         "type": "constructor"
       }
     ],
-    "unlinked_binary": "0x60606040526103e860005560558060166000396000f3606060405260e060020a6000350463b69ef8a881146026578063b6b55f25146032575b6002565b34600257604360005481565b346002576000805460043501908190555b60408051918252519081900360200190f3",
+    "unlinked_binary": "0x6060604052600080546c0100000000000000000000000033810204600160a060020a031990911617808255600160a060020a031681526001602052604090206103e8905561011d806100516000396000f3606060405260e060020a60003504638da5cb5b8114610034578063a9059cbb1461004b578063f8b2cb4f14610082575b610002565b34610002576100b4600054600160a060020a031681565b34610002576100d0600435602435600160a060020a033316600090815260016020526040812054829010156100e457506000610117565b3461000257600160a060020a036004351660009081526001602052604090205460408051918252519081900360200190f35b60408051600160a060020a039092168252519081900360200190f35b604080519115158252519081900360200190f35b50600160a060020a0333811660009081526001602081905260408083208054869003905592851682529190208054830190555b9291505056",
     "events": {},
-    "updated_at": 1484420998144,
+    "updated_at": 1484424555230,
     "links": {},
-    "address": "0x739bc110bb475afe998b5a24f932d11bacfba2df"
+    "address": "0x1754f5222ed724ce0225cfe2a816997e752dea52"
   }
 };
 
